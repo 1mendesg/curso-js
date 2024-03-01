@@ -1,0 +1,49 @@
+body{
+    background-color: bisque;
+    text-align: center;
+    font:normal 15pt arial;
+}
+
+input{
+    border:15px;
+    border-color: rgb(158, 103, 103);
+    color: black;
+    
+}
+
+input#veri{
+background-color: rgb(49, 204, 49);
+height: 40px;
+width: 100px;
+font:normal 15pt arial;
+border-radius: 10px;
+
+}
+
+input#idade{
+    font:normal 15pt arial;
+    width: 200px;
+    border-radius: 25px;
+    border-color: rgba(0, 0, 0, 0.678);
+}
+
+
+
+div{
+    text-align: center;
+    background-color: aliceblue;
+   border-radius: 25px;
+   margin: 0 auto;
+   width: 400px;
+   height:220px;
+   
+}
+
+
+
+
+
+
+footer{
+    text-align: center;
+}

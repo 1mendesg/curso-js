@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos dom</title>
+    <style>
+        div#area{
+            font: normal 15pt arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height:200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+    <style>
+        body{
+            background: rgb(12, 12, 12);
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        CLIQUE AQUI!
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        window.alert("MEIRA CLIQUE NO BOTAO ABAIXO")
+        function clicar() {
+            a.innerText ='MAMA EU RS'
+        }
+        function entrou(){
+            a.innerText = 'eu te amo meira'
+        }
+        function saiu(){
+            a.innerText = 'CLIQUE AQUI!'
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual sua nação</title>
+</head>
+<STYLE>
+body{
+    background-color: rgb(74, 109, 97);
+    font: normal 25pt monaspace;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:courier,arial,
+
+}
+input{
+    height: 100px;
+    width: 500px;
+    font:normal 30pt arial;
+    border-color: brown;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background: aquamarine;
+}
+input#mera{
+    height: 100px;
+    width: 500px;
+    font:normal 30pt arial;
+    border-color: brown;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+img#mera{
+    display:none;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: 600px;
+    border-color: black;
+    
+}
+div#res{
+    height: 150px;
+    width: 250px;
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    border-radius: 25px;
+    border-color: brown;
+    font: normal 25pt arial;
+    
+}
+input#checkbox{
+    height:20px;
+    width:20px
+    
+    
+
+}
+
+
+
+
+</STYLE>
+<body>
+    <center>
+        <H1 id="lula">Sistema de nacionalidade</H1>
+    
+
+        <p>Qual seu país de origem?</p>
+    
+  
+    <div id="res">O resultado aparecerá aqui!
+    </div id= area>
+        <input type="text" name="txt1" id="txt1">
+        <input id=" mera" type="button" value="Verificar" onclick="verificar()" onclick="entrou()"></br>
+        <input type="checkbox" id="checkbox" onchange="checkboxChange()">
+    <script>
+var ver = window.document.getElementById('mera')
+var are = document.getElementById('area')
+        function verificar(){
+            var br = window.document.getElementById('txt1')
+            var stg = String(txt1.value)
+            var res = window.document.getElementById('res')
+            var meira = window.document.getElementById('mera')
+            if (stg == 'brasil' ){
+                res.innerHTML = `<strong>voce é brasileiro</strong>`; 
+                window.confirm('Voce ta preparado?')
+                mera.src = 'https://i.pinimg.com/564x/28/26/3c/28263ce44d75dd1938c1a25329f14a9f.jpg' 
+                mera.style.display = 'block'
+                checkbox.remove()
+                a.remove()
+                
+                
+            }
+            else{
+                res.innerHTML = 'Voce  é <strong>estrangeiro</strong>'
+                mera.style.display = 'none'
+            }
+  
+        }
+        /*function playsound(){
+            var audio = document.getElementById('audio')
+            audio.play()
+        }*/
+                function checkboxChange(){
+                    var checkbox = document.getElementById("checkbox")
+                   
+                    if (checkbox.checked) {
+                        console.log("Checkbox marcado")
+
+                }
+                else {
+        console.log("Checkbox desmarcado")}
+               function entrou(){
+                ver.innerText='Verificado'
+
+
+
+               }
+            
+            }
+
+
+
+       
+    </script>
+
+<img id="mera" src="https://i.pinimg.com/564x/28/26/3c/28263ce44d75dd1938c1a25329f14a9f.jpg" alt="imagemmacaco">
+<audio id="audio">src = https://www.myinstants.com/pt/instant/ai-cachorro-funk-86839/>
+    <button onclick="playsound()">Tem certeza?</button>
+</audio>
+
+    <label id ='a'for="checkbox">Aceito os termos e condições</label>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qual sua nação</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<STYLE>
+body{
+    background-color: rgb(74, 109, 97);
+    font: normal 25pt monaspace;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+input{
+    height: 100px;
+    width: 500px;
+    font:normal 30pt montserrat;
+    border-color: brown;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background: aquamarine;
+}
+input#mera{
+    height: 100px;
+    width: 500px;
+    font:normal 30pt montserrat;
+    border-color: brown;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+img#mera{
+    display:none;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: 600px;
+    border-color: black;
+    
+}
+
+
+
+
+</STYLE>
+<body>
+    <center>
+        <button class="btn btn-primary" onclick="(customConfirm)">Custom Confirm</button>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza de que deseja continuar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmAction()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function customConfirm() {
+            $('#confirmModal').modal('show');
+        }
+
+        function confirmAction() {
+            alert('Ação confirmada!');
+            // Aqui você pode adicionar a lógica para a ação confirmada
+            $('#confirmModal').modal('hide');
+        }
+    </script>
+        <H1 id="lula">sistema de nacionalidade</H1>
+    
+
+        <p>qual seu país de origem?</p>
+    
+  
+    <div id="res">
+    </div>
+        <input type="text" name="txt1" id="txt1">
+        <input id=" mera" type="button" value="verificar" onclick="verificar()">
+    <script>
+
+        function verificar(){
+            var br = window.document.getElementById('txt1')
+            var stg = String(txt1.value)
+            var res = window.document.getElementById('res')
+            var meira = window.document.getElementById('mera')
+            if (stg == 'brasil' ){
+                res.innerHTML = `<strong>voce é brasileiro</strong>`; 
+                mera.src = 'https://i.pinimg.com/564x/28/26/3c/28263ce44d75dd1938c1a25329f14a9f.jpg' 
+                mera.style.display = 'block' 
+            }
+            else{
+                res.innerHTML = 'voce nao é <strong>brasileiro</strong>'
+                mera.style.display = 'none'
+            }
+  
+        }
+        /*function playsound(){
+            var audio = document.getElementById('audio')
+            audio.play()
+        }*/
+
+       
+    </script>
+<img id="mera" src="https://i.pinimg.com/564x/28/26/3c/28263ce44d75dd1938c1a25329f14a9f.jpg" alt="imagemmacaco">
+<audio id="audio">src = https://www.myinstants.com/pt/instant/ai-cachorro-funk-86839/>
+    <button onclick="playsound()">tem certeza?</button>
+</audio>
+</center>
+</body>
+</html>
